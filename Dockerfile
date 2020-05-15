@@ -1,9 +1,6 @@
 FROM node:12-alpine AS builder
 WORKDIR /app
 COPY . ./
-# COPY *.json ./
-# COPY index.ts ./
-# COPY src/ ./src/
 RUN yarn && yarn build
 
 FROM node:12-alpine
