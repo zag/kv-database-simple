@@ -1,0 +1,28 @@
+version: "3"
+
+volumes:
+  data:
+
+services:
+  datadb:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    working_dir: /app
+    command: "npm run start:prod"
+    volumes:
+      - data:/app/data
+    environment:
+      - RMQ_HOST=rabbitmq
+      - INCOME_QUEUE=in
+      - OUTCOME_QUEUE=out
+    links:
+      - rabbitmq
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    container_name: "rabbitmq"
+    image: "rabbitmq:3-alpine"
+

@@ -1,0 +1,31 @@
+{
+  "name": "kv-database-simple",
+  "version": "1.0.0",
+  "description": "key-value database simple",
+  "main": "index.js",
+  "author": "Alex",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"*/**/*.ts\"",
+    "lint": "eslint --fix \"*/**/*.ts\"",
+    "test": "jest",
+    "build": "tsc",
+    "start:dev": "ts-node-dev --watch src1 --ignore-watch \"test.ts$\" index.ts",
+    "start:prod": "node build/index.js"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.13",
+    "@types/jest": "^25.2.2",
+    "@types/uuid": "^7.0.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.5.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@types/ramda": "^0.27.4",
+    "amqplib": "^0.5.6",
+    "ramda": "^0.27.0",
+    "uuid": "^8.0.0"
+  }
+}
