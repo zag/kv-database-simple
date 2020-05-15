@@ -24,7 +24,7 @@ journal
 
 ## Configuration
 
-   `check src/config`
+   check `src/config`
 
 or via ENV
 
