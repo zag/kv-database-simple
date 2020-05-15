@@ -5,7 +5,7 @@
 
 ## Commands format 
 
-   <command> <key> [<value>]
+   `<command> <key> [<value>]`
 
 Example:
 
@@ -16,16 +16,18 @@ Example:
 ## Journals and snapshots 
 
 snapshots:
- data/*-snapshot.json
+
+ `data/*-snapshot.json`
 
 journal 
- data/journal.log
+ `data/journal.log`
 
 ## Configuration
 
-   check src/config
+   `check src/config`
 
 or via ENV
+
       RMQ_HOST=rabbitmq
       INCOME_QUEUE=in
       OUTCOME_QUEUE=out
