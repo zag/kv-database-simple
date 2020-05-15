@@ -16,6 +16,7 @@ services:
       - RMQ_HOST=rabbitmq
       - INCOME_QUEUE=in
       - OUTCOME_QUEUE=out
+      - DATA_PATH=/app/data
     links:
       - rabbitmq
     restart: on-failure

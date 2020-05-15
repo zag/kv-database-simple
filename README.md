@@ -1,7 +1,7 @@
 
 ## Start containers
 
-./docker-compose up
+  docker-compose up
 
 ## Commands format 
 
