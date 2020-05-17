@@ -25,14 +25,12 @@ export interface MessagesParams {
       this.channel = await this.connection.createChannel();
       await this.channel.assertQueue(this.config.incomeQueue);
       await this.channel.assertQueue(this.config.outcomeQueue);
-      this.channel.prefetch(1);
     }
 
     async consume() {
       await this.channel.consume(this.config.incomeQueue, (msg)=> {
         if (msg !==null ) {
           this.emit('get', msg.content.toString())
-          this.channel.ack(msg);
         }
       });
     }
